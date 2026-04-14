@@ -1,15 +1,15 @@
-# Cybersecurity Learning Notes
+# table of contents
 
-> Mabel's cybersecurity journey — organized by topic.
-
----
-
-## Contents
-
-*Notes will be linked here as topics are added.*
+> my cybersecurity journey — organized by topic.
 
 ---
 
-## Cheatsheets
+## notes
 
-*Quick-reference guides will be linked here.*
+*notes will be linked here as topics are added.*
+
+---
+
+## cheatsheets
+
+*quick-reference guides will be linked here.*

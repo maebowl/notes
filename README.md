@@ -1,5 +1,5 @@
-# Cybersecurity Notes
+# cybersecurity notes
 
-My notes and cheatsheets from learning cybersecurity.
+my notes and cheatsheets from learning cybersecurity.
 
-**[View the Table of Contents](table-of-contents.md)**
+**[table of contents](table-of-contents.md)**
