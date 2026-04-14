@@ -98,12 +98,14 @@ both found 23 ports in this case, but `-T 5` can absolutely miss things on slowe
 
 ## the bottom line
 
+> click any flag to see its full explanation in the [glossary](nmap-glossary.md).
+
 | option | what it does |
 |---|---|
-| `--initial-rtt-timeout` | starting timeout |
-| `--max-rtt-timeout` | max timeout |
-| `--max-retries` | how many times to retry each port |
-| `--min-rate` | minimum packets per second |
-| `-T <0-5>` | timing template preset |
+| [`--initial-rtt-timeout`](nmap-glossary.md#--initial-rtt-timeout-time) | starting timeout |
+| [`--max-rtt-timeout`](nmap-glossary.md#--max-rtt-timeout-time) | max timeout |
+| [`--max-retries`](nmap-glossary.md#--max-retries-number) | how many times to retry each port |
+| [`--min-rate`](nmap-glossary.md#--min-rate-number) | minimum packets per second |
+| [`-T <0-5>`](nmap-glossary.md#-t-0-5) | timing template preset |
 
 the general rule: start with defaults, speed up *only* when you understand the tradeoff. missing a single open port could mean missing your way in.

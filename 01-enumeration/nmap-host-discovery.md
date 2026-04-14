@@ -156,12 +156,14 @@ RCVD (0.0152s) ICMP [10.129.2.18 > 10.10.14.2 Echo reply (type=0/code=0) id=1360
 
 ## useful options at a glance
 
+> click any flag to see its full explanation in the [glossary](nmap-glossary.md).
+
 | option | what it does |
 |---|---|
-| `-sn` | host discovery only, no port scan |
-| `-PE` | ICMP echo request |
-| `-oA <name>` | save results in all formats |
-| `-iL <file>` | read targets from a file |
-| `--packet-trace` | show all packets sent and received |
-| `--reason` | show why a port/host is in a particular state |
-| `--disable-arp-ping` | force ICMP instead of ARP on local networks |
+| [`-sn`](nmap-glossary.md#-sn) | host discovery only, no port scan |
+| [`-PE`](nmap-glossary.md#-pe) | ICMP echo request |
+| [`-oA <name>`](nmap-glossary.md#-oa-basename) | save results in all formats |
+| [`-iL <file>`](nmap-glossary.md#-il-file) | read targets from a file |
+| [`--packet-trace`](nmap-glossary.md#--packet-trace) | show all packets sent and received |
+| [`--reason`](nmap-glossary.md#--reason) | show why a port/host is in a particular state |
+| [`--disable-arp-ping`](nmap-glossary.md#--disable-arp-ping) | force ICMP instead of ARP on local networks |

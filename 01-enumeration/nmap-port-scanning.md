@@ -161,17 +161,19 @@ PORT    STATE  SERVICE REASON
 
 ## useful options at a glance
 
+> click any flag to see its full explanation in the [glossary](nmap-glossary.md).
+
 | option | what it does |
 |---|---|
-| `-sS` | SYN scan (default with root) |
-| `-sT` | connect scan (full handshake) |
-| `-sU` | UDP scan |
-| `-p <ports>` | specify ports |
-| `-p-` | all ports |
-| `-F` | fast — top 100 |
-| `--top-ports=N` | top N most common |
-| `--packet-trace` | see all packets |
-| `-Pn` | skip host discovery |
-| `-n` | skip DNS resolution |
-| `--reason` | explain why a port is in its state |
-| `--disable-arp-ping` | no ARP, use ICMP |
+| [`-sS`](nmap-glossary.md#-ss) | SYN scan (default with root) |
+| [`-sT`](nmap-glossary.md#-st) | connect scan (full handshake) |
+| [`-sU`](nmap-glossary.md#-su) | UDP scan |
+| [`-p <ports>`](nmap-glossary.md#-p-ports) | specify ports |
+| [`-p-`](nmap-glossary.md#-p-ports) | all ports |
+| [`-F`](nmap-glossary.md#-f) | fast — top 100 |
+| [`--top-ports=N`](nmap-glossary.md#--top-portsn) | top N most common |
+| [`--packet-trace`](nmap-glossary.md#--packet-trace) | see all packets |
+| [`-Pn`](nmap-glossary.md#-pn) | skip host discovery |
+| [`-n`](nmap-glossary.md#-n) | skip DNS resolution |
+| [`--reason`](nmap-glossary.md#--reason) | explain why a port is in its state |
+| [`--disable-arp-ping`](nmap-glossary.md#--disable-arp-ping) | no ARP, use ICMP |

@@ -36,6 +36,8 @@ simple as that.
 
 - **[firewall and IDS/IPS evasion](nmap-firewall-evasion.md)** — ACK scans, decoys, source IP spoofing, DNS proxying, and staying under the radar.
 
+- **[flag glossary](nmap-glossary.md)** — every flag and option explained. clickable from all the other notes.
+
 ---
 
 ## scan types at a glance

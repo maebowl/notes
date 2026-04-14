@@ -169,14 +169,16 @@ you can also specify which DNS servers to use with `--dns-server`. this is espec
 
 ## evasion options at a glance
 
+> click any flag to see its full explanation in the [glossary](nmap-glossary.md).
+
 | option | what it does |
 |---|---|
-| `-sA` | ACK scan — harder for firewalls to filter |
-| `-D RND:5` | generate 5 random decoy IPs |
-| `-S <IP>` | spoof source IP address |
-| `-e <interface>` | specify network interface |
-| `--source-port 53` | make traffic look like it's from DNS |
-| `--dns-server <ns>` | use custom DNS servers |
+| [`-sA`](nmap-glossary.md#-sa) | ACK scan — harder for firewalls to filter |
+| [`-D RND:5`](nmap-glossary.md#-d-decoys) | generate 5 random decoy IPs |
+| [`-S <IP>`](nmap-glossary.md#-s-ip) | spoof source IP address |
+| [`-e <interface>`](nmap-glossary.md#-e-interface) | specify network interface |
+| [`--source-port 53`](nmap-glossary.md#--source-port-port) | make traffic look like it's from DNS |
+| [`--dns-server <ns>`](nmap-glossary.md#--dns-server-ns) | use custom DNS servers |
 
 ---
 
