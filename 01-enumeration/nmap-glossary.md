@@ -459,6 +459,23 @@ look for "DNS Servers" under your active network adapter.
 **which DNS server should you actually use?**
 
 - **target's own DNS server** — if you've discovered one during enumeration, this is gold. internal DNS servers know about internal hostnames that public DNS doesn't. if the target is running DNS on port 53, try using *that* as your DNS server.
+
+  **how to find it:** scan for port 53 on the target network. if something's listening, that's probably a DNS server.
+
+  ```bash
+  # find DNS servers on the network
+  sudo nmap -p 53 10.129.2.0/24 -sS --open
+
+  # check if it's actually DNS (not just port 53 open for something else)
+  sudo nmap -p 53 -sV 10.129.2.1
+  sudo nmap -p 53 -sU -sV 10.129.2.1         # DNS often runs on UDP 53 too
+
+  # try a quick DNS query against it to confirm
+  nslookup example.com 10.129.2.1
+  dig @10.129.2.1 example.com
+  ```
+
+  you can also check nmap's service scan output — if you've already run `-sV` on the network, look for anything labeled `domain` or `dns` in the results. another trick: if you find an active directory domain controller (usually ports 88, 389, 445 open), it's almost always running DNS on port 53 too.
 - **the network's default DNS** — whatever's in `/etc/resolv.conf` or `ipconfig /all`. these are usually the ones the network trusts.
 - **public DNS** (8.8.8.8, 1.1.1.1) — useful as a fallback, but won't resolve internal hostnames.
 
