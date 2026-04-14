@@ -173,7 +173,29 @@
 **spoof source IP.** makes the scan appear to come from a different IP address. useful for testing firewall rules from different subnets.
 
 ### -e \<interface\>
-**specify network interface.** tells nmap which network interface to send packets through (e.g., `eth0`, `tun0`).
+**specify network interface.** tells nmap which network interface to send packets through. required when using `-S` (source IP spoofing) so nmap knows *where* to send the packets from.
+
+**how to find your interfaces:**
+
+on linux:
+```bash
+ip a
+```
+
+on windows:
+```cmd
+ipconfig
+```
+
+common interface names:
+- `eth0` — wired ethernet (your physical connection)
+- `wlan0` — wireless
+- `tun0` — VPN tunnel (this is the one you'll use on HTB/THM when connected to their VPN)
+- `lo` — loopback (localhost, 127.0.0.1 — you probably don't want this one)
+
+the trick is picking the right one. if you're scanning through a VPN, use `tun0`. if you're on a local network, use `eth0` or `wlan0`. if you pick the wrong interface, your packets go nowhere and nmap just sits there confused.
+
+**quick way to figure it out:** look at which interface has an IP address in the same network as your target. if your target is `10.129.2.28` and `tun0` has `10.10.14.2`, that's your VPN — use `tun0`.
 
 ### --source-port \<port\>
 **spoof source port.** makes the scan appear to come from a specific port. port 53 (DNS) is a classic choice because firewalls often trust DNS traffic.
