@@ -6,7 +6,9 @@
 
 ## notes
 
-*notes will be linked here as topics are added.*
+### 01 — enumeration
+- [enumeration](01-enumeration/enumeration.md) — what it is, why it matters, and why people get stuck
+- [nmap](01-enumeration/nmap.md) — network mapper basics, scan types, and reading results
 
 ---
 
