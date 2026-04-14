@@ -30,6 +30,12 @@ simple as that.
 
 - **[saving results](nmap-saving-results.md)** — output formats (normal, grepable, XML), and turning scans into pretty HTML reports.
 
+- **[scripting engine (NSE)](nmap-scripting-engine.md)** — lua scripts for recon, vuln scanning, brute-forcing, and the aggressive scan (`-A`).
+
+- **[performance tuning](nmap-performance.md)** — timeouts, retries, packet rates, and timing templates (`-T 0` through `-T 5`).
+
+- **[firewall and IDS/IPS evasion](nmap-firewall-evasion.md)** — ACK scans, decoys, source IP spoofing, DNS proxying, and staying under the radar.
+
 ---
 
 ## scan types at a glance
