@@ -223,6 +223,31 @@ the trick is picking the right one. if you're scanning through a VPN, use `tun0`
 ### --dns-server \<ns\>
 **custom DNS servers.** use specific DNS servers instead of the system defaults. useful in a DMZ where internal DNS servers are more trusted.
 
+**how to find DNS servers to use:**
+
+on linux:
+```bash
+# check your current DNS config
+cat /etc/resolv.conf
+
+# or if you're using systemd
+resolvectl status
+```
+
+on windows:
+```cmd
+ipconfig /all
+```
+look for "DNS Servers" under your active network adapter.
+
+**which DNS server should you actually use?**
+
+- **target's own DNS server** — if you've discovered one during enumeration, this is gold. internal DNS servers know about internal hostnames that public DNS doesn't. if the target is running DNS on port 53, try using *that* as your DNS server.
+- **the network's default DNS** — whatever's in `/etc/resolv.conf` or `ipconfig /all`. these are usually the ones the network trusts.
+- **public DNS** (8.8.8.8, 1.1.1.1) — useful as a fallback, but won't resolve internal hostnames.
+
+**why this matters:** in a pentest, the company's internal DNS servers often resolve hostnames that reveal internal infrastructure — subdomains, internal services, dev servers. public DNS won't show you any of that. using `--dns-server` with an internal DNS server can uncover hosts you'd otherwise never find.
+
 ---
 
 ## misc
