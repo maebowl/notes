@@ -12,6 +12,44 @@ when you're doing an internal pentest on a company's network, step one is figuri
 
 ---
 
+## wait — how do i find my network range?
+
+before you can scan a network, you need to know what network you're on. here's how:
+
+### linux
+
+```bash
+ip a
+```
+
+look for your active interface (usually `eth0`, `wlan0`, or `tun0` for VPN). you'll see something like:
+
+```
+inet 10.10.14.2/24
+```
+
+that `/24` is your subnet — it means the network range is `10.10.14.0/24` (the first three octets stay the same, last one is 0-255, giving you 256 addresses).
+
+### windows
+
+```cmd
+ipconfig
+```
+
+look for your IPv4 address and subnet mask. a subnet mask of `255.255.255.0` = `/24`.
+
+### quick CIDR cheatsheet
+
+| CIDR | subnet mask | hosts |
+|---|---|---|
+| `/24` | 255.255.255.0 | 256 |
+| `/16` | 255.255.0.0 | 65,536 |
+| `/8` | 255.0.0.0 | 16,777,216 |
+
+so if your IP is `10.129.2.18/24`, your network range is `10.129.2.0/24`. that's what you feed to nmap.
+
+---
+
 ## scanning a network range
 
 ```bash
