@@ -56,5 +56,6 @@ you're gathering info from publicly available sources. stealthier, but you only 
 
 - **[WHOIS](whois.md)** — domain registration lookups, what they reveal, and why they matter
 - **[DNS](dns.md)** — how DNS works, record types, zones, and using dig for recon
+- **[subdomains](subdomains.md)** — why they matter, active vs passive enumeration, and brute-forcing with dnsenum
 
 *more topics will be linked here as they're added.*
