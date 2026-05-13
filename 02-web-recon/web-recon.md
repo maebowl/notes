@@ -55,5 +55,6 @@ you're gathering info from publicly available sources. stealthier, but you only 
 ## the deep dives
 
 - **[WHOIS](whois.md)** — domain registration lookups, what they reveal, and why they matter
+- **[DNS](dns.md)** — how DNS works, record types, zones, and using dig for recon
 
 *more topics will be linked here as they're added.*
