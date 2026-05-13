@@ -29,7 +29,7 @@ two approaches: active and passive. ideally, you use both.
 
 you're directly interacting with the target's DNS. more thorough, but more detectable.
 
-**zone transfers** — if a DNS server is misconfigured, it might hand you a complete list of all subdomains. rarely works these days because admins have gotten better about locking this down, but always worth trying.
+**[zone transfers](dns-zone-transfers.md)** — if a DNS server is misconfigured, it might hand you a complete list of all subdomains. rarely works these days because admins have gotten better about locking this down, but always worth trying.
 
 **brute-force enumeration** — systematically test a list of potential subdomain names against the target. this is the bread and butter approach.
 
